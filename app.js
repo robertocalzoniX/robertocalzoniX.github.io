@@ -27,3 +27,25 @@ async function loadPosts(){
 }
 document.getElementById('year').textContent=new Date().getFullYear();
 loadPosts();
+
+async function loadQuotes(){
+  const container=document.getElementById('quotes');
+  if(!container) return;
+  try{
+    const response=await fetch('quotes.json',{cache:'no-store'});
+    if(!response.ok) throw new Error('Citazioni non disponibili');
+    const data=await response.json();
+    const quotes=Array.isArray(data)?data:(data.quotes||[]);
+    if(!quotes.length){
+      container.innerHTML='<div class="quote-empty">Nessuna citazione ancora.</div>';
+      return;
+    }
+    container.innerHTML=quotes.map(function(quote){
+      const note=quote.note ? '<span class="quote-note">'+escapeHtml(quote.note)+'</span>' : '';
+      return '<blockquote class="quote-card"><p class="quote-text">'+escapeHtml(quote.text||'')+'</p><div class="quote-footer"><span class="quote-author">'+escapeHtml(quote.author||'Anonimo')+'</span>'+note+'</div></blockquote>';
+    }).join('');
+  }catch(e){
+    container.innerHTML='<div class="quote-empty">Le citazioni non sono al momento disponibili.</div>';
+  }
+}
+loadQuotes();

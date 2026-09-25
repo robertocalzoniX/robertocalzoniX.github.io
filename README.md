@@ -30,3 +30,20 @@ Il formato atteso è:
 ```
 
 Il passo successivo è aggiungere un workflow GitHub Actions che interroghi X con credenziali salvate nei repository secrets e aggiorni questo file.
+
+
+## Citazioni
+La sezione Citazioni legge il file `quotes.json`.
+
+Esempio:
+```json
+{
+  "quotes": [
+    {
+      "text": "Testo della citazione",
+      "author": "Autore",
+      "note": "Nota facoltativa"
+    }
+  ]
+}
+```

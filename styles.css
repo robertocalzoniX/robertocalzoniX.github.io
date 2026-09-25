@@ -53,3 +53,14 @@ footer{padding:34px 28px 48px;border-top:1px solid var(--line);display:flex;just
   .section-heading{display:block}.feed-tools{margin-top:18px}.features article{grid-template-columns:42px 1fr}.features article p{grid-column:2}
 }
 @media(max-width:560px){.site-header,.hero,.section,footer{padding-left:20px;padding-right:20px}h1{font-size:46px}.intro{font-size:18px}.hero-panel{padding:22px}}
+
+.section-note{max-width:460px;color:var(--muted);margin:0}
+.quotes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.quote-card{background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(245,248,255,.92));border:1px solid var(--line);border-radius:var(--radius);padding:30px;min-height:230px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.quote-card::before{content:"“";position:absolute;top:-22px;right:18px;font-size:120px;line-height:1;color:rgba(37,99,235,.09);font-family:Georgia,serif}
+.quote-text{font-family:Georgia,serif;font-size:clamp(24px,3vw,34px);line-height:1.22;letter-spacing:-.025em;margin:0 0 30px;position:relative}
+.quote-footer{display:flex;justify-content:space-between;gap:18px;align-items:end;color:var(--muted);font-size:13px}
+.quote-author{font-weight:800;color:var(--ink)}
+.quote-note{max-width:55%;text-align:right}
+.quote-empty{color:var(--muted);background:rgba(255,255,255,.65);border:1px dashed var(--line);border-radius:var(--radius);padding:26px}
+@media(max-width:860px){.quotes-grid{grid-template-columns:1fr}.section-note{margin-top:18px}}
