@@ -3,19 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Sito personale di Roberto Calzoni: aggiornamenti, progetti e contatti.">
+  <meta name="description" content="Roberto Calzoni — aggiornamenti, progetti e collegamenti.">
+  <meta name="theme-color" content="#0b1220">
   <title>Roberto Calzoni</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top">Roberto Calzoni</a>
+    <a class="brand" href="#top" aria-label="Roberto Calzoni, homepage">
+      <span class="brand-mark">RC</span>
+      <span>Roberto Calzoni</span>
+    </a>
     <nav aria-label="Navigazione principale">
       <a href="#aggiornamenti">Aggiornamenti</a>
-      <a href="#profilo">Profilo</a>
+      <a href="#progetto">Il progetto</a>
       <a href="#contatti">Contatti</a>
     </nav>
   </header>
@@ -23,15 +27,24 @@
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Spazio personale</p>
-        <h1>Appunti, progetti e aggiornamenti in un unico posto.</h1>
-        <p class="intro">Un sito leggero e indipendente, pensato per raccogliere automaticamente i contenuti pubblicati sui social e affiancarli a pagine più stabili.</p>
-        <a class="primary" href="#aggiornamenti">Vedi gli aggiornamenti</a>
+        <p class="eyebrow">Digital hub personale</p>
+        <h1>Un posto solo per raccogliere ciò che pubblico.</h1>
+        <p class="intro">Un sito statico, veloce e indipendente, pensato per trasformare gli aggiornamenti pubblicati sui social in contenuti ordinati e leggibili.</p>
+        <div class="hero-actions">
+          <a class="primary" href="#aggiornamenti">Esplora gli aggiornamenti</a>
+          <a class="secondary" href="https://github.com/robertocalzoniX" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
       </div>
-      <aside class="hero-card" aria-label="Informazioni sul sito">
-        <span class="status-dot"></span>
-        <strong>Sito sperimentale</strong>
-        <p>Questa prima versione usa contenuti di esempio. Il prossimo passaggio sarà collegare il feed reale di X.</p>
+      <aside class="hero-panel">
+        <div class="panel-top">
+          <span class="live-pill"><span></span> Online</span>
+          <span class="mono">v0.2</span>
+        </div>
+        <div>
+          <p class="panel-label">Flusso previsto</p>
+          <strong>X → importazione → sito</strong>
+        </div>
+        <p>La struttura è già pronta per sostituire i contenuti demo con post reali importati automaticamente.</p>
       </aside>
     </section>
 
@@ -41,35 +54,52 @@
           <p class="eyebrow">Feed</p>
           <h2>Ultimi aggiornamenti</h2>
         </div>
-        <p class="section-note">In futuro questa sezione potrà essere alimentata automaticamente dai post pubblicati su X.</p>
+        <div class="feed-tools">
+          <span id="feedStatus" class="feed-status">Contenuti demo</span>
+        </div>
       </div>
       <div id="posts" class="post-grid" aria-live="polite"></div>
     </section>
 
-    <section id="profilo" class="section split">
+    <section id="progetto" class="section project-grid">
       <div>
-        <p class="eyebrow">Profilo</p>
-        <h2>Uno spazio semplice da aggiornare.</h2>
+        <p class="eyebrow">Il progetto</p>
+        <h2>Semplice da pubblicare, facile da mantenere.</h2>
       </div>
-      <div class="body-copy">
-        <p>Il sito è ospitato su GitHub Pages e non richiede un CMS tradizionale. Le pagine statiche restano veloci, mentre gli aggiornamenti possono essere importati automaticamente da fonti esterne.</p>
-        <p>La struttura è predisposta per aggiungere in seguito sezioni dedicate, un dominio personalizzato e un flusso automatico X → sito.</p>
+      <div class="features">
+        <article>
+          <span>01</span>
+          <h3>Statico</h3>
+          <p>Niente database o CMS tradizionale: il sito resta leggero, veloce e con una superficie di attacco ridotta.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Automatico</h3>
+          <p>I post possono essere importati a intervalli regolari e salvati nel file dati del sito.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Versionato</h3>
+          <p>Ogni modifica resta tracciata su GitHub, con possibilità di tornare facilmente a una versione precedente.</p>
+        </article>
       </div>
     </section>
 
     <section id="contatti" class="section contact">
-      <p class="eyebrow">Contatti</p>
-      <h2>Collegamenti</h2>
+      <div>
+        <p class="eyebrow">Collegamenti</p>
+        <h2>Seguimi online</h2>
+      </div>
       <div class="contact-links">
-        <a href="https://github.com/robertocalzoniX" target="_blank" rel="noreferrer">GitHub ↗</a>
-        <a href="#" aria-disabled="true">X — da collegare</a>
+        <a href="https://github.com/robertocalzoniX" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+        <a class="disabled" href="#" aria-disabled="true">X <span>da collegare</span></a>
       </div>
     </section>
   </main>
 
   <footer>
     <span>© <span id="year"></span> Roberto Calzoni</span>
-    <span>Pubblicato con GitHub Pages</span>
+    <span>GitHub Pages · sito statico</span>
   </footer>
 
   <script src="app.js"></script>
