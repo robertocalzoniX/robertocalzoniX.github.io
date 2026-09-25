@@ -1,0 +1,23 @@
+[
+  {
+    "date":"25 settembre 2026",
+    "category":"Tecnologia",
+    "title":"Un sito statico come hub dei contenuti",
+    "text":"Prima prova della struttura che in seguito potrà importare automaticamente gli aggiornamenti pubblicati su X.",
+    "url":"#"
+  },
+  {
+    "date":"24 settembre 2026",
+    "category":"Progetti",
+    "title":"GitHub Pages come base del progetto",
+    "text":"Hosting semplice, versionamento integrato e nessun server tradizionale da amministrare.",
+    "url":"#"
+  },
+  {
+    "date":"23 settembre 2026",
+    "category":"Automazione",
+    "title":"Preparazione del feed automatico",
+    "text":"Il prossimo step sarà recuperare i nuovi post da X e convertirli in contenuti nativi del sito.",
+    "url":"#"
+  }
+]
