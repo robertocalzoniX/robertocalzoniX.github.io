@@ -1,7 +1,7 @@
 const $=id=>document.getElementById(id);
 const type=$('type'), text=$('text'), title=$('title'), url=$('url'), date=$('date');
 const sourceAuthor=$('sourceAuthor'), quoteAuthor=$('quoteAuthor'), note=$('note');
-const articleCategory=$('articleCategory'), articleSummary=$('articleSummary');
+const articleCategory=$('articleCategory'), articleSummary=$('articleSummary'), xEmbedCode=$('xEmbedCode');
 const output=$('jsonOutput'), preview=$('preview'), openGithub=$('openGithub'), status=$('copyStatus');
 
 date.value=new Date().toISOString().slice(0,10);
@@ -15,13 +15,33 @@ const dateIt=s=>{
 
 function build(){
   const kind=type.value;
-  document.querySelectorAll('.post-field').forEach(el=>el.hidden=kind==='quote');
+  document.querySelectorAll('.post-field').forEach(el=>el.hidden=(kind==='quote'||kind==='xembed'));
   document.querySelectorAll('.article-only').forEach(el=>el.hidden=kind!=='article');
   document.querySelectorAll('.repost-only').forEach(el=>el.hidden=kind!=='repost');
   document.querySelectorAll('.quote-only').forEach(el=>el.hidden=kind!=='quote');
+  document.querySelectorAll('.xembed-only').forEach(el=>el.hidden=kind!=='xembed');
+  const textField=document.querySelector('.content-text-field');
+  if(textField) textField.hidden=kind==='xembed';
 
   let obj;
-  if(kind==='quote'){
+  if(kind==='xembed'){
+    const raw=xEmbedCode.value.trim();
+    const match=raw.match(/https?:\/\/(?:www\.)?(?:x\.com|twitter\.com)\/[^\s"'<>]+\/status\/(\d+)/i);
+    const tweetId=match?match[1]:'';
+    const tweetUrl=match?match[0].replace(/\?.*$/,'').replace(/\/(?:photo|video)\/\d+$/,''):'';
+    obj={
+      id:'x-'+(tweetId||Date.now()),
+      date:dateIt(date.value),
+      category:'X',
+      type:'x-embed',
+      tweet_id:tweetId,
+      url:tweetUrl
+    };
+    openGithub.href='https://github.com/robertocalzoniX/robertocalzoniX.github.io/edit/main/posts.json';
+    preview.innerHTML=tweetId
+      ? '<div class="x-embed-preview"><strong>Post X incorporato</strong><span>ID '+esc(tweetId)+'</span><a href="'+esc(tweetUrl)+'" target="_blank" rel="noreferrer">Apri il post su X ↗</a></div>'
+      : '<div class="x-embed-preview x-embed-warning">Incolla il codice HTML completo copiato da X. Non riesco ancora a trovare l\'ID del post.</div>';
+  } else if(kind==='quote'){
     obj={
       text:text.value.trim(),
       author:quoteAuthor.value.trim()||'Anonimo',
@@ -57,7 +77,7 @@ function build(){
   return obj;
 }
 
-[type,text,title,url,date,sourceAuthor,quoteAuthor,note,articleCategory,articleSummary].forEach(el=>el.addEventListener('input',build));
+[type,text,title,url,date,sourceAuthor,quoteAuthor,note,articleCategory,articleSummary,xEmbedCode].forEach(el=>el.addEventListener('input',build));
 type.addEventListener('change',build);
 
 $('copyJson').addEventListener('click',async()=>{

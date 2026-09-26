@@ -33,6 +33,7 @@
           <label for="type">Tipo di contenuto</label>
           <select id="type">
             <option value="post">Post</option>
+            <option value="xembed">Post X incorporato</option>
             <option value="repost">Repost</option>
             <option value="quote">Citazione</option>
             <option value="article">Articolo</option>
@@ -49,9 +50,15 @@
           <input id="title" type="text" placeholder="Es. Post su X">
         </div>
 
-        <div class="field">
+        <div class="field content-text-field">
           <label for="text">Testo</label>
-          <textarea id="text" rows="6" placeholder="Scrivi qui il contenuto..." required></textarea>
+          <textarea id="text" rows="6" placeholder="Scrivi qui il contenuto..."></textarea>
+        </div>
+
+        <div class="field xembed-only" hidden>
+          <label for="xEmbedCode">Codice HTML del post X</label>
+          <textarea id="xEmbedCode" rows="9" placeholder="Incolla qui il codice &lt;blockquote class=&quot;twitter-tweet&quot;&gt;... copiato da X"></textarea>
+          <small class="field-help">Puoi incollare tutto il codice fornito da X, compreso lo script. L'editor ricaverà automaticamente l'ID del post e non salverà script nel JSON.</small>
         </div>
 
         <div class="field post-field">

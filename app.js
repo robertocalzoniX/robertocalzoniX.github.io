@@ -1,4 +1,32 @@
 const escapeHtml=(value='')=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function loadXWidgets(){
+  const render=()=>{
+    if(!window.twttr||!window.twttr.widgets) return;
+    document.querySelectorAll('.x-tweet-mount[data-tweet-id]').forEach(el=>{
+      if(el.dataset.rendered==='1') return;
+      el.dataset.rendered='1';
+      const id=el.dataset.tweetId;
+      el.innerHTML='';
+      window.twttr.widgets.createTweet(id,el,{dnt:true,theme:'light',align:'center'}).then(node=>{
+        if(!node){
+          el.innerHTML='<p class="x-embed-error">Il post non può essere incorporato. <a href="'+escapeHtml(el.closest('.x-embed-card')?.querySelector('a')?.href||'https://x.com')+'" target="_blank" rel="noreferrer">Aprilo su X ↗</a></p>';
+        }
+      });
+    });
+  };
+  if(window.twttr&&window.twttr.widgets){ render(); return; }
+  let script=document.getElementById('x-widgets-script');
+  if(!script){
+    script=document.createElement('script');
+    script.id='x-widgets-script';
+    script.src='https://platform.twitter.com/widgets.js';
+    script.async=true;
+    script.charset='utf-8';
+    document.head.appendChild(script);
+  }
+  script.addEventListener('load',render,{once:true});
+}
+
 async function loadPosts(){
   const container=document.getElementById('posts');
   const status=document.getElementById('feedStatus');
@@ -10,7 +38,15 @@ async function loadPosts(){
     const source=Array.isArray(data)?'demo':(data.source||'demo');
     status.textContent=source==='manual'?'Aggiornamenti manuali':(source==='x'?'Feed X':'Aggiornamenti');
     if(!posts.length){ container.innerHTML='<p>Nessun aggiornamento ancora.</p>'; return; }
-    container.innerHTML=posts.map(post=>{
+    container.innerHTML=posts.map((post,index)=>{
+      if(post.type==='x-embed'&&post.tweet_id){
+        return `<article class="x-embed-card">
+          <div class="x-embed-meta"><span class="post-category">X</span><time>${escapeHtml(post.date||'')}</time></div>
+          <div class="x-tweet-mount" id="x-tweet-${index}" data-tweet-id="${escapeHtml(post.tweet_id)}">
+            <a href="${escapeHtml(post.url||'https://x.com')}" target="_blank" rel="noreferrer">Caricamento post X…</a>
+          </div>
+        </article>`;
+      }
       const href=post.url&&post.url!=='#'?post.url:'#';
       const external=href!=='#'?' target="_blank" rel="noreferrer"':'';
       return `<article class="post-card">
@@ -21,6 +57,7 @@ async function loadPosts(){
         <a class="post-link" href="${escapeHtml(href)}"${external}>${href==='#'?'Anteprima':'Vedi post originale ↗'}</a>
       </article>`;
     }).join('');
+    if(posts.some(post=>post.type==='x-embed'&&post.tweet_id)) loadXWidgets();
   }catch(e){
     status.textContent='Feed non disponibile';
     container.innerHTML='<p>Gli aggiornamenti non sono al momento disponibili.</p>';
