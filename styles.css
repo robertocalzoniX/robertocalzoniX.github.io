@@ -128,3 +128,5 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 .header-image{padding:14px 28px 0}
 .header-image img{display:block;width:100%;height:clamp(220px,28vw,360px);object-fit:cover;object-position:center center;border-radius:28px;box-shadow:0 18px 48px rgba(11,18,32,.10)}
 @media(max-width:560px){.header-image{padding-left:20px;padding-right:20px}.header-image img{height:220px;border-radius:20px}}
+
+.hero h1{font-size:clamp(34px,4vw,54px);line-height:1.02;letter-spacing:-.045em}
