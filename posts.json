@@ -11,20 +11,20 @@
       "url": "https://x.com/UCI_cycling/status/2103916792028778655"
     },
     {
-      "id": "x-2103591839378911722",
-      "date": "25 settembre 2026",
-      "category": "X",
-      "type": "x-embed",
-      "tweet_id": "2103591839378911722",
-      "url": "https://x.com/UCI_cycling/status/2103591839378911722"
-    },
-    {
       "id": "x-2103692644211683653",
       "date": "26 settembre 2026",
       "category": "X",
       "type": "x-embed",
       "tweet_id": "2103692644211683653",
       "url": "https://x.com/EmileeLy/status/2103692644211683653"
+    },
+    {
+      "id": "x-2103591839378911722",
+      "date": "25 settembre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2103591839378911722",
+      "url": "https://x.com/UCI_cycling/status/2103591839378911722"
     }
   ]
 }
