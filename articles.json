@@ -1,3 +1,12 @@
 {
-  "articles": []
+  "articles": [
+    {
+      "id": "article-psexec-silent-installations",
+      "date": "26 settembre 2026",
+      "category": "Tecnologia",
+      "title": "PsExec: datato, ma ancora molto utile",
+      "summary": "Uno strumento storico che continua a essere efficace per installazioni software in silent mode su laboratori e postazioni utente.",
+      "body": "Per installazioni software in silent mode su laboratori e postazioni utente continuo a utilizzare PsExec, storico strumento della suite Sysinternals di Microsoft.\n\nNonostante l’età, resta pratico: è leggero, veloce, non richiede agent permanenti e permette di eseguire comandi da remoto in modo diretto.\n\nPer interventi mirati, come distribuire rapidamente pacchetti MSI o installer EXE con parametri silent, continua a essere una soluzione efficace.\n\nLe piattaforme moderne offrono funzioni più avanzate di gestione e reporting, ma per molte attività operative PsExec rimane uno strumento semplice, affidabile e ancora molto valido."
+    }
+  ]
 }
