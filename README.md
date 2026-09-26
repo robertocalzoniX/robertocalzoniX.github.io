@@ -3,47 +3,35 @@
 Sito personale pubblicato con GitHub Pages.
 
 ## Struttura
+
 - `index.html` — homepage
 - `styles.css` — stile responsive
-- `app.js` — rendering del feed
-- `posts.json` — sorgente dati degli aggiornamenti
+- `app.js` — rendering di aggiornamenti e citazioni
+- `editor.html` — pannello editoriale
+- `editor.js` — logica del pannello editoriale
+- `posts.json` — aggiornamenti pubblicati manualmente
+- `quotes.json` — citazioni
+- `assets/` — immagini del sito
 
-## Feed X
-Il sito è predisposto per ricevere dati da X sostituendo il contenuto di `posts.json`.
-Il formato atteso è:
+## Gestione degli aggiornamenti
 
-```json
-{
-  "source": "x",
-  "updated_at": "ISO-8601",
-  "posts": [
-    {
-      "id": "123",
-      "date": "25 settembre 2026",
-      "category": "X",
-      "title": "Titolo ricavato dal post",
-      "text": "Testo del post",
-      "url": "https://x.com/.../status/..."
-    }
-  ]
-}
-```
+Gli aggiornamenti non vengono più importati automaticamente dalle API di X.
 
-Il passo successivo è aggiungere un workflow GitHub Actions che interroghi X con credenziali salvate nei repository secrets e aggiorni questo file.
+Il flusso previsto è:
 
+1. aprire `editor.html`;
+2. scegliere Post, Repost o Citazione;
+3. compilare i campi;
+4. copiare il JSON generato;
+5. aprire `posts.json` o `quotes.json` su GitHub;
+6. inserire il nuovo elemento e salvare con **Commit changes**.
 
-## Citazioni
-La sezione Citazioni legge il file `quotes.json`.
+GitHub Pages pubblicherà automaticamente la nuova versione del sito.
 
-Esempio:
-```json
-{
-  "quotes": [
-    {
-      "text": "Testo della citazione",
-      "author": "Autore",
-      "note": "Nota facoltativa"
-    }
-  ]
-}
-```
+## Collegamenti social
+
+Il sito contiene collegamenti diretti ai profili GitHub, X, Strava e Garmin Connect.
+
+## Note
+
+Non sono necessarie credenziali API X, workflow GitHub Actions o script di importazione automatica.

@@ -1,30 +1,5 @@
 {
-  "source":"demo",
-  "updated_at":"2026-09-25T22:30:00+02:00",
-  "posts":[
-    {
-      "id":"demo-001",
-      "date":"25 settembre 2026",
-      "category":"Tecnologia",
-      "title":"Un sito statico come hub dei contenuti",
-      "text":"Prima evoluzione del progetto: il sito è pronto a ricevere automaticamente contenuti provenienti da X senza dipendere da un CMS tradizionale.",
-      "url":"#"
-    },
-    {
-      "id":"demo-002",
-      "date":"25 settembre 2026",
-      "category":"GitHub",
-      "title":"GitHub Pages come base del progetto",
-      "text":"Hosting semplice, versionamento integrato e distribuzione automatica: ogni modifica al repository può diventare subito una nuova versione del sito.",
-      "url":"#"
-    },
-    {
-      "id":"demo-003",
-      "date":"25 settembre 2026",
-      "category":"Automazione",
-      "title":"Struttura pronta per il feed di X",
-      "text":"Il file posts.json è già separato dal layout: l'integrazione futura dovrà soltanto aggiornare i dati, senza modificare il codice della homepage.",
-      "url":"#"
-    }
-  ]
+  "source": "manual",
+  "updated_at": "2026-09-26T11:30:00+02:00",
+  "posts": []
 }

@@ -8,7 +8,8 @@ async function loadPosts(){
     const data=await response.json();
     const posts=Array.isArray(data)?data:data.posts;
     const source=Array.isArray(data)?'demo':(data.source||'demo');
-    status.textContent=source==='x'?'Feed X':'Contenuti demo';
+    status.textContent=source==='manual'?'Aggiornamenti manuali':(source==='x'?'Feed X':'Aggiornamenti');
+    if(!posts.length){ container.innerHTML='<p>Nessun aggiornamento ancora.</p>'; return; }
     container.innerHTML=posts.map(post=>{
       const href=post.url&&post.url!=='#'?post.url:'#';
       const external=href!=='#'?' target="_blank" rel="noreferrer"':'';
