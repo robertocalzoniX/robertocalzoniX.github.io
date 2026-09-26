@@ -120,3 +120,7 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 .archive-hero{padding:72px 28px 40px}
 .archive-hero h1{font-size:clamp(48px,7vw,82px)}
 @media(max-width:560px){.archive-hero{padding-left:20px;padding-right:20px}}
+
+.brand-copy{display:flex;flex-direction:column;line-height:1.1}
+.brand-name{font-weight:800}
+.brand-tagline{margin-top:4px;font-size:11px;font-weight:500;letter-spacing:.01em;color:var(--muted)}
