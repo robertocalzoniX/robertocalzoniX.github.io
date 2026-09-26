@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Archivio completo dei post X di Roberto Calzoni.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Tutti i post · Roberto Calzoni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><img src="assets/avatar-roberto.jpg" alt="Roberto Calzoni"></span>
+      <span>Roberto Calzoni</span>
+    </a>
+    <nav><a href="index.html">← Torna alla home</a></nav>
+  </header>
+
+  <main>
+    <section class="archive-hero">
+      <p class="eyebrow">Archivio</p>
+      <h1>Tutti i post X</h1>
+      <p class="intro">Qui trovi l'intero archivio dei post X pubblicati nel sito.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Feed completo</p>
+          <h2>Archivio post</h2>
+        </div>
+        <div class="feed-tools">
+          <span id="feedStatus" class="feed-status">Aggiornamenti manuali</span>
+        </div>
+      </div>
+      <div id="posts" class="post-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Roberto Calzoni</span>
+    <span>GitHub Pages · sito statico</span>
+  </footer>
+
+  <script src="posts.js"></script>
+</body>
+</html>

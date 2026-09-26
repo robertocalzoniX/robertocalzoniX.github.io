@@ -65,7 +65,7 @@ async function loadPosts(limit=6){
   }
 }
 document.getElementById('year').textContent=new Date().getFullYear();
-loadPosts(6);
+loadPosts(Infinity);
 
 async function loadQuotes(){
   const container=document.getElementById('quotes');
@@ -87,7 +87,7 @@ async function loadQuotes(){
     container.innerHTML='<div class="quote-empty">Le citazioni non sono al momento disponibili.</div>';
   }
 }
-loadQuotes();
+
 
 
 async function loadArticles(){
@@ -117,4 +117,4 @@ async function loadArticles(){
     container.innerHTML='<div class="article-empty">Gli articoli non sono al momento disponibili.</div>';
   }
 }
-loadArticles();
+

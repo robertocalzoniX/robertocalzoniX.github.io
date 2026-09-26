@@ -115,3 +115,8 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 .x-tweet-mount>div,.x-tweet-mount iframe{max-width:420px!important;width:100%!important}
 .x-embed-error{color:var(--muted);text-align:center}
 .x-embed-error a{font-weight:750;color:var(--accent)}
+
+.section-more{display:flex;justify-content:center;margin-top:28px}
+.archive-hero{padding:72px 28px 40px}
+.archive-hero h1{font-size:clamp(48px,7vw,82px)}
+@media(max-width:560px){.archive-hero{padding-left:20px;padding-right:20px}}
