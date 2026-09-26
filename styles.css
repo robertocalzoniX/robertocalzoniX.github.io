@@ -65,3 +65,29 @@ footer{padding:34px 28px 48px;border-top:1px solid var(--line);display:flex;just
 .quote-note{max-width:55%;text-align:right}
 .quote-empty{color:var(--muted);background:rgba(255,255,255,.65);border:1px dashed var(--line);border-radius:var(--radius);padding:26px}
 @media(max-width:860px){.quotes-grid{grid-template-columns:1fr}.section-note{margin-top:18px}}
+
+.editor-main{max-width:var(--max);margin:auto;padding:0 28px 72px}
+.editor-intro{padding:70px 0 50px}
+.editor-intro h1{font-size:clamp(44px,6vw,72px)}
+.editor-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.9fr);gap:24px;align-items:start}
+.editor-card,.editor-preview,.editor-help{background:rgba(255,255,255,.88);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.field{display:grid;gap:8px;margin-bottom:18px}
+.field label{font-size:13px;font-weight:800}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);font:inherit;padding:13px 14px;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#9bb7f6;box-shadow:0 0 0 4px rgba(37,99,235,.08)}
+.field textarea{resize:vertical}
+.editor-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.button-reset{border:0;font:inherit;cursor:pointer}
+.editor-status{min-height:24px;color:var(--muted);font-size:13px;margin:12px 0 0}
+.editor-preview{position:sticky;top:18px}
+.editor-preview .post-card,.editor-preview .quote-card{margin-bottom:20px}
+.editor-post-preview{min-height:260px}
+.json-box{background:#0b1220;color:#d9e2f1;border-radius:18px;overflow:hidden}
+.json-title{padding:12px 15px;border-bottom:1px solid rgba(255,255,255,.1);font-size:12px;font-weight:800;color:#9fb3cf}
+.json-box pre{margin:0;padding:18px;overflow:auto;font:12px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap}
+.editor-help{margin-top:24px}
+.editor-help h2{font-size:28px;margin-bottom:18px}
+.editor-help ol{margin:0;padding-left:22px;color:var(--muted)}
+.editor-help li+li{margin-top:8px}
+footer a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:860px){.editor-main{padding-left:20px;padding-right:20px}.editor-layout{grid-template-columns:1fr}.editor-preview{position:static}.editor-intro{padding-top:46px}}

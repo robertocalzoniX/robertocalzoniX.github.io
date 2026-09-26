@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#0b1220">
+  <title>Editor · Roberto Calzoni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><img src="assets/avatar-roberto.jpg" alt="Roberto Calzoni"></span>
+      <span>Roberto Calzoni</span>
+    </a>
+    <nav><a href="index.html">← Torna al sito</a></nav>
+  </header>
+
+  <main class="editor-main">
+    <section class="editor-intro">
+      <p class="eyebrow">Pannello editoriale</p>
+      <h1>Prepara un contenuto.</h1>
+      <p class="intro">Compila il modulo: il pannello genera il JSON corretto e ti porta direttamente al file GitHub da aggiornare. Nessuna password o token viene salvato nel sito.</p>
+    </section>
+
+    <section class="editor-layout">
+      <form id="editorForm" class="editor-card">
+        <div class="field">
+          <label for="type">Tipo di contenuto</label>
+          <select id="type">
+            <option value="post">Post</option>
+            <option value="repost">Repost</option>
+            <option value="quote">Citazione</option>
+          </select>
+        </div>
+
+        <div class="field post-field">
+          <label for="date">Data</label>
+          <input id="date" type="date">
+        </div>
+
+        <div class="field post-field">
+          <label for="title">Titolo</label>
+          <input id="title" type="text" placeholder="Es. Post su X">
+        </div>
+
+        <div class="field">
+          <label for="text">Testo</label>
+          <textarea id="text" rows="6" placeholder="Scrivi qui il contenuto..." required></textarea>
+        </div>
+
+        <div class="field post-field">
+          <label for="url">Link X</label>
+          <input id="url" type="url" placeholder="https://x.com/...">
+        </div>
+
+        <div class="field repost-only" hidden>
+          <label for="sourceAuthor">Autore del repost</label>
+          <input id="sourceAuthor" type="text" placeholder="@nomeutente">
+        </div>
+
+        <div class="field quote-only" hidden>
+          <label for="quoteAuthor">Autore della citazione</label>
+          <input id="quoteAuthor" type="text" placeholder="Anonimo">
+        </div>
+
+        <div class="field quote-only" hidden>
+          <label for="note">Nota facoltativa</label>
+          <input id="note" type="text" placeholder="Es. appunto personale">
+        </div>
+
+        <div class="editor-actions">
+          <button class="primary button-reset" type="button" id="copyJson">Copia JSON</button>
+          <a class="secondary" id="openGithub" target="_blank" rel="noreferrer">Apri file su GitHub ↗</a>
+        </div>
+        <p id="copyStatus" class="editor-status" aria-live="polite"></p>
+      </form>
+
+      <aside class="editor-preview">
+        <p class="eyebrow">Anteprima</p>
+        <div id="preview"></div>
+        <div class="json-box">
+          <div class="json-title">JSON generato</div>
+          <pre id="jsonOutput"></pre>
+        </div>
+      </aside>
+    </section>
+
+    <section class="editor-help">
+      <h2>Come pubblicare</h2>
+      <ol>
+        <li>Compila il modulo e clicca <strong>Copia JSON</strong>.</li>
+        <li>Clicca <strong>Apri file su GitHub</strong>.</li>
+        <li>Modifica il file e inserisci il nuovo oggetto all'inizio dell'elenco.</li>
+        <li>Salva con <strong>Commit changes</strong>. GitHub Pages aggiornerà il sito.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script src="editor.js"></script>
+</body>
+</html>
