@@ -35,6 +35,7 @@
             <option value="post">Post</option>
             <option value="repost">Repost</option>
             <option value="quote">Citazione</option>
+            <option value="article">Articolo</option>
           </select>
         </div>
 
@@ -71,6 +72,16 @@
         <div class="field quote-only" hidden>
           <label for="note">Nota facoltativa</label>
           <input id="note" type="text" placeholder="Es. appunto personale">
+        </div>
+
+        <div class="field article-only" hidden>
+          <label for="articleCategory">Categoria</label>
+          <input id="articleCategory" type="text" placeholder="Es. Tecnologia">
+        </div>
+
+        <div class="field article-only" hidden>
+          <label for="articleSummary">Sommario</label>
+          <textarea id="articleSummary" rows="3" placeholder="Breve introduzione all'articolo..."></textarea>
         </div>
 
         <div class="editor-actions">

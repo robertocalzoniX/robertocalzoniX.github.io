@@ -50,3 +50,33 @@ async function loadQuotes(){
   }
 }
 loadQuotes();
+
+
+async function loadArticles(){
+  const container=document.getElementById('articles');
+  if(!container) return;
+  try{
+    const response=await fetch('articles.json',{cache:'no-store'});
+    if(!response.ok) throw new Error('Articoli non disponibili');
+    const data=await response.json();
+    const articles=Array.isArray(data)?data:(data.articles||[]);
+    if(!articles.length){
+      container.innerHTML='<div class="article-empty">Nessun articolo ancora.</div>';
+      return;
+    }
+    container.innerHTML=articles.map(article=>{
+      const category=article.category ? '<span class="article-category">'+escapeHtml(article.category)+'</span>' : '';
+      const summary=article.summary ? '<p class="article-summary">'+escapeHtml(article.summary)+'</p>' : '';
+      const body=article.body ? '<div class="article-body">'+escapeHtml(article.body).replace(/\n/g,'<br>')+'</div>' : '';
+      return '<article class="article-card">'+
+        '<div class="article-meta">'+category+'<time>'+escapeHtml(article.date||'')+'</time></div>'+
+        '<h3>'+escapeHtml(article.title||'Articolo')+'</h3>'+
+        summary+
+        (body?'<details><summary>Leggi articolo</summary>'+body+'</details>':'')+
+        '</article>';
+    }).join('');
+  }catch(e){
+    container.innerHTML='<div class="article-empty">Gli articoli non sono al momento disponibili.</div>';
+  }
+}
+loadArticles();

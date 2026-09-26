@@ -91,3 +91,15 @@ footer{padding:34px 28px 48px;border-top:1px solid var(--line);display:flex;just
 .editor-help li+li{margin-top:8px}
 footer a{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:860px){.editor-main{padding-left:20px;padding-right:20px}.editor-layout{grid-template-columns:1fr}.editor-preview{position:static}.editor-intro{padding-top:46px}}
+
+.articles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.article-card{background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:var(--radius);padding:28px;min-height:260px}
+.article-meta{display:flex;justify-content:space-between;gap:14px;align-items:center;color:var(--muted);font-size:12px;margin-bottom:24px}
+.article-category{font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+.article-card h3{font-size:30px;line-height:1.08;letter-spacing:-.04em;margin:0 0 14px}
+.article-summary{font-size:17px;color:var(--muted);margin:0 0 20px}
+.article-card details{border-top:1px solid var(--line);padding-top:16px;margin-top:18px}
+.article-card summary{cursor:pointer;font-weight:800}
+.article-body{margin-top:16px;color:#344054;line-height:1.75}
+.article-empty{color:var(--muted);background:rgba(255,255,255,.65);border:1px dashed var(--line);border-radius:var(--radius);padding:26px}
+@media(max-width:860px){.articles-grid{grid-template-columns:1fr}}
