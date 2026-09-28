@@ -1,15 +1,23 @@
 {
   "source": "manual",
-  "updated_at": "2026-09-26T18:30:00+02:00",
+  "updated_at": "2026-09-28T19:05:00+02:00",
   "posts": [
     {
-  "id": "x-2104291267391672349",
-  "date": "27 settembre 2026",
-  "category": "X",
-  "type": "x-embed",
-  "tweet_id": "2104291267391672349",
-  "url": "https://x.com/UCI_cycling/status/2104291267391672349"
-},
+      "id": "x-2104297646768668862",
+      "date": "27 settembre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2104297646768668862",
+      "url": "https://x.com/rosyneve84/status/2104297646768668862"
+    },
+    {
+      "id": "x-2104291267391672349",
+      "date": "27 settembre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2104291267391672349",
+      "url": "https://x.com/UCI_cycling/status/2104291267391672349"
+    },
     {
       "id": "x-2104220162107060326",
       "date": "27 settembre 2026",
