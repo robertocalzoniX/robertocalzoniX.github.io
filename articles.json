@@ -1,6 +1,14 @@
 {
   "articles": [
     {
+      "id": "article-ottano-carburanti",
+      "date": "29 settembre 2026",
+      "category": "Web",
+      "title": "Ottano: risparmiare sul carburante",
+      "summary": "Una web app gratuita per confrontare rapidamente i prezzi dei carburanti.",
+      "body": "Con benzina e gasolio a prezzi sempre più elevati, confrontare i distributori prima di fare rifornimento può essere utile.\n\nOttano è una web app gratuita che utilizza i dati pubblici del MIMIT per trovare e confrontare i prezzi dei carburanti nella propria zona o lungo un percorso.\n\nSemplice, immediata e senza bisogno di installare nulla.\n\nOttano: https://ottano.netlify.app/"
+    },
+    {
       "id": "article-psexec-silent-installations",
       "date": "26 settembre 2026",
       "category": "Tecnologia",
