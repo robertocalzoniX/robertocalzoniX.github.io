@@ -1,7 +1,15 @@
 {
   "source": "manual",
-  "updated_at": "2026-09-29T21:36:00+02:00",
+  "updated_at": "2026-10-01T21:20:00+02:00",
   "posts": [
+    {
+      "id": "x-2105587952302916041",
+      "date": "1 ottobre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2105587952302916041",
+      "url": "https://x.com/DonatoCarrisi/status/2105587952302916041"
+    },
     {
       "id": "x-2104926903022817431",
       "date": "29 settembre 2026",
