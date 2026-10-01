@@ -1,4 +1,5 @@
 const escapeHtml=(value='')=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const linkifyText=(value='')=>escapeHtml(value).replace(/(https?:\/\/[^\s<]+)/g,'<a class="article-link" href="$1" target="_blank" rel="noreferrer">$1 ↗</a>');
 function loadXWidgets(){
   const render=()=>{
     if(!window.twttr||!window.twttr.widgets) return;
@@ -105,7 +106,7 @@ async function loadArticles(){
     container.innerHTML=articles.map(article=>{
       const category=article.category ? '<span class="article-category">'+escapeHtml(article.category)+'</span>' : '';
       const summary=article.summary ? '<p class="article-summary">'+escapeHtml(article.summary)+'</p>' : '';
-      const body=article.body ? '<div class="article-body">'+escapeHtml(article.body).replace(/\n/g,'<br>')+'</div>' : '';
+      const body=article.body ? '<div class="article-body">'+linkifyText(article.body).replace(/\n/g,'<br>')+'</div>' : '';
       return '<article class="article-card">'+
         '<div class="article-meta">'+category+'<time>'+escapeHtml(article.date||'')+'</time></div>'+
         '<h3>'+escapeHtml(article.title||'Articolo')+'</h3>'+
