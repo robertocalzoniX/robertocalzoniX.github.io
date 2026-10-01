@@ -6,7 +6,9 @@
       "category": "Running",
       "title": "Maratone e mezze: pubblicato il calendario FIDAL 2027",
       "summary": "FIDAL ha pubblicato il calendario 2027 di maratone e mezze maratone, con 219 eventi complessivi.",
-      "body": "FIDAL ha pubblicato il calendario 2027 di maratone e mezze maratone: 219 eventi complessivi, con 12 nuove manifestazioni che entrano nel circuito federale.\n\nTra le mezze maratone di categoria Oro figurano Napoli, RomaOstia, Stramilano e Rome Half Marathon, mentre il calendario comprende anche numerosi appuntamenti classificati Argento e Bronzo.\n\nInserita anche la maratona a Bergamo il 4 ottobre 2027.\n\nUn calendario da consultare per iniziare a programmare le gare del prossimo anno. 🏃\n\nCalendario FIDAL 2027: https://www.fidal.it/content/Maratone-e-mezze-219-eventi-nel-2027/186849"
+      "body": "FIDAL ha pubblicato il calendario 2027 di maratone e mezze maratone: 219 eventi complessivi, con 12 nuove manifestazioni che entrano nel circuito federale.\n\nTra le mezze maratone di categoria Oro figurano Napoli, RomaOstia, Stramilano e Rome Half Marathon, mentre il calendario comprende anche numerosi appuntamenti classificati Argento e Bronzo.\n\nInserita anche la maratona a Bergamo il 4 ottobre 2027.\n\nUn calendario da consultare per iniziare a programmare le gare del prossimo anno. 🏃",
+      "url": "https://www.fidal.it/content/Maratone-e-mezze-219-eventi-nel-2027/186849",
+      "link_label": "Apri il calendario FIDAL"
     },
     {
       "id": "article-ottano-carburanti",
@@ -14,7 +16,9 @@
       "category": "Web",
       "title": "Ottano: risparmiare sul carburante",
       "summary": "Una web app gratuita per confrontare rapidamente i prezzi dei carburanti.",
-      "body": "Con benzina e gasolio a prezzi sempre più elevati, confrontare i distributori prima di fare rifornimento può essere utile.\n\nOttano è una web app gratuita che utilizza i dati pubblici del MIMIT per trovare e confrontare i prezzi dei carburanti nella propria zona o lungo un percorso.\n\nSemplice, immediata e senza bisogno di installare nulla.\n\nOttano: https://ottano.netlify.app/"
+      "body": "Con benzina e gasolio a prezzi sempre più elevati, confrontare i distributori prima di fare rifornimento può essere utile.\n\nOttano è una web app gratuita che utilizza i dati pubblici del MIMIT per trovare e confrontare i prezzi dei carburanti nella propria zona o lungo un percorso.\n\nSemplice, immediata e senza bisogno di installare nulla.",
+      "url": "https://ottano.netlify.app/",
+      "link_label": "Apri Ottano"
     },
     {
       "id": "article-psexec-silent-installations",
