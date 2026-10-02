@@ -66,7 +66,7 @@ async function loadPosts(limit=6){
   }
 }
 document.getElementById('year').textContent=new Date().getFullYear();
-loadPosts(6);
+loadPosts(4);
 
 async function loadQuotes(){
   const container=document.getElementById('quotes');
