@@ -1,15 +1,23 @@
 {
   "source": "manual",
-  "updated_at": "2026-10-01T21:20:00+02:00",
+  "updated_at": "2026-10-03T16:30:00+02:00",
   "posts": [
     {
-  "id": "x-2105768024783602156",
-  "date": "2 ottobre 2026",
-  "category": "X",
-  "type": "x-embed",
-  "tweet_id": "2105768024783602156",
-  "url": "https://x.com/FrenkieWoody/status/2105768024783602156"
-},
+      "id": "x-2106377663170723916",
+      "date": "3 ottobre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2106377663170723916",
+      "url": "https://x.com/Eurosport_IT/status/2106377663170723916"
+    },
+    {
+      "id": "x-2105768024783602156",
+      "date": "2 ottobre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2105768024783602156",
+      "url": "https://x.com/FrenkieWoody/status/2105768024783602156"
+    },
     {
       "id": "x-2105587952302916041",
       "date": "1 ottobre 2026",
