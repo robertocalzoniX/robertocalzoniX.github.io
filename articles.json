@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "id": "article-brooks-strada-trail",
+      "date": "3 ottobre 2026",
+      "category": "Running",
+      "title": "Brooks: strada e trail",
+      "summary": "Una parte della mia collezione di scarpe Brooks per corsa su strada e trail running.",
+      "body": "Ecco una parte della mia collezione di scarpe Brooks: Adrenaline e Glycerin per la corsa su strada e Cascadia per il trail running.\n\nModelli diversi per terreni ed esigenze diverse, ma con un denominatore comune: tanti chilometri percorsi. 🏃",
+      "image": "assets/scarpe-running.jpg"
+    },
+    {
       "id": "article-calendario-fidal-2027",
       "date": "1 ottobre 2026",
       "category": "Running",

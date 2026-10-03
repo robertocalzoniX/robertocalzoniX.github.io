@@ -105,10 +105,11 @@ async function loadArticles(){
     }
     container.innerHTML=articles.map(article=>{
       const category=article.category ? '<span class="article-category">'+escapeHtml(article.category)+'</span>' : '';
+      const image=article.image ? '<img class="article-image" src="'+escapeHtml(article.image)+'" alt="'+escapeHtml(article.title||'Immagine articolo')+'" loading="lazy">' : '';
       const summary=article.summary ? '<p class="article-summary">'+escapeHtml(article.summary)+'</p>' : '';
       const body=article.body ? '<div class="article-body">'+escapeHtml(article.body).replace(/\n/g,'<br>')+'</div>' : '';
       const articleLink=article.url ? '<a class="article-link-button" href="'+escapeHtml(article.url)+'" target="_blank" rel="noreferrer">'+escapeHtml(article.link_label||'Apri link')+' ↗</a>' : '';
-      return '<article class="article-card">'+
+      return '<article class="article-card">'+image+
         '<div class="article-meta">'+category+'<time>'+escapeHtml(article.date||'')+'</time></div>'+
         '<h3>'+escapeHtml(article.title||'Articolo')+'</h3>'+
         summary+

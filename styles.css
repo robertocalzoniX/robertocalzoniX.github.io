@@ -134,3 +134,5 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 @media(min-width:861px) and (max-width:1050px){
   .post-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+.article-image{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:18px;margin:0 0 22px;border:1px solid var(--line)}
