@@ -1,7 +1,15 @@
 {
   "source": "manual",
-  "updated_at": "2026-10-06T07:24:00+02:00",
+  "updated_at": "2026-10-06T11:48:00+02:00",
   "posts": [
+    {
+      "id": "x-2107141680956948536",
+      "date": "5 ottobre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2107141680956948536",
+      "url": "https://x.com/ElZiudadano/status/2107141680956948536"
+    },
     {
       "id": "x-2107316066808373667",
       "date": "6 ottobre 2026",
