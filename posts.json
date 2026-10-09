@@ -1,7 +1,15 @@
 {
   "source": "manual",
-  "updated_at": "2026-10-08T19:34:00+02:00",
+  "updated_at": "2026-10-09T19:17:00+02:00",
   "posts": [
+    {
+      "id": "x-2108565936433160578",
+      "date": "9 ottobre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2108565936433160578",
+      "url": "https://x.com/Il_Lombardia/status/2108565936433160578"
+    },
     {
       "id": "x-2108188374334919046",
       "date": "8 ottobre 2026",
