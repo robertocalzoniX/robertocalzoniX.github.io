@@ -6,7 +6,6 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 ROOT = Path(__file__).resolve().parents[1]
 PHOTOS = [
     ROOT / "assets" / "20261011_113822.jpg",
-    ROOT / "assets" / "header-cycling.jpg",
     ROOT / "assets" / "scarpe-running.jpg",
 ]
 MARKER = ROOT / "assets" / ".watermark-completed"
@@ -36,7 +35,7 @@ def main():
         out = Image.alpha_composite(image.convert("RGBA"), draw_layer).convert("RGB")
         out.save(path, "JPEG", quality=90, optimize=True, subsampling=0)
         print(f"Watermarked {path.name}: {w}x{h}")
-    MARKER.write_text("Applied centered © Roberto Calzoni watermark to three photos.\n", encoding="utf-8")
+    MARKER.write_text("Applied centered © Roberto Calzoni watermark to two photos.\n", encoding="utf-8")
 
 if __name__ == "__main__":
     main()

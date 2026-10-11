@@ -1,8 +1,5 @@
 name: Watermark site photographs (one time)
 on:
-  push:
-    paths:
-      - ".github/workflows/watermark-site-photos.yml"
   workflow_dispatch:
 
 permissions:
@@ -26,7 +23,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/20261011_113822.jpg assets/header-cycling.jpg assets/scarpe-running.jpg assets/.watermark-completed
+          git add assets/20261011_113822.jpg assets/scarpe-running.jpg assets/.watermark-completed
           if ! git diff --cached --quiet; then
             git commit -m "Apply permanent centered watermark to site photographs"
             git push
