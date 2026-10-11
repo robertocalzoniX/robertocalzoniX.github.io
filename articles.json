@@ -1,6 +1,17 @@
 {
   "articles": [
     {
+      "id": "article-mezza-maratona-11-ottobre-2026",
+      "date": "11 ottobre 2026",
+      "category": "Running",
+      "title": "Una mezza maratona tra record personali e gestione del ritmo",
+      "summary": "21,26 km in 1:42:15, otto record personali e qualche indicazione utile per le prossime gare.",
+      "body": "Questa mattina ho corso una mezza maratona: 21,26 km registrati dal GPS in 1:42:15, a una media di 4:49/km. Strava ha rilevato il mio miglior tempo sulla distanza della mezza in 1:41:33, ma il tempo ufficiale resta da verificare.\n\nSono arrivati otto record personali, tra cui 5 km in 22:30 e 10 km in 46:03. Sono partito forte, intorno a 4:23-4:27/km nei primi chilometri, per poi rallentare progressivamente nella seconda parte. Anche i dati di frequenza cardiaca e potenza raccontano la fatica crescente, senza però un vero crollo.\n\nNegli ultimi metri sono riuscito comunque a trovare le energie per accelerare. Porto a casa un buon risultato, diversi primati e una lezione per la prossima mezza: partire con un po' più di prudenza può aiutarmi a gestire meglio tutta la distanza.",
+      "image": "assets/20261011_113822.jpg",
+      "strava_id": "20537997941",
+      "strava_token": "leC-0T9xkh7i3bEiYKxNVz8IY9gi4pp_udvTOz0gWe8"
+    },
+    {
       "id": "article-brooks-strada-trail",
       "date": "3 ottobre 2026",
       "category": "Running",
