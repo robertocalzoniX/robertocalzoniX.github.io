@@ -91,6 +91,16 @@ async function loadQuotes(){
 loadQuotes();
 
 
+function loadStravaEmbeds(){
+  const embeds=[...document.querySelectorAll('details[open] .strava-embed-placeholder[data-embed-type="activity"]')];
+  if(!embeds.some(el=>!el.querySelector('iframe'))) return;
+  // Run the official Strava script when an article is expanded.
+  const script=document.createElement('script');
+  script.src='https://strava-embeds.com/embed.js';
+  script.async=true;
+  document.body.appendChild(script);
+}
+
 async function loadArticles(){
   const container=document.getElementById('articles');
   if(!container) return;
@@ -109,13 +119,20 @@ async function loadArticles(){
       const summary=article.summary ? '<p class="article-summary">'+escapeHtml(article.summary)+'</p>' : '';
       const body=article.body ? '<div class="article-body">'+escapeHtml(article.body).replace(/\n/g,'<br>')+'</div>' : '';
       const articleLink=article.url ? '<a class="article-link-button" href="'+escapeHtml(article.url)+'" target="_blank" rel="noreferrer">'+escapeHtml(article.link_label||'Apri link')+' ↗</a>' : '';
+      const stravaId=String(article.strava_id||'');
+      const stravaToken=String(article.strava_token||'');
+      const validStrava=/^\d+$/.test(stravaId)&&/^[A-Za-z0-9_-]+$/.test(stravaToken);
+      const strava=validStrava ? '<div class="article-strava"><div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="'+escapeHtml(stravaId)+'" data-style="standard" data-from-embed="false" data-token="'+escapeHtml(stravaToken)+'"></div><a class="article-strava-link" href="https://www.strava.com/activities/'+escapeHtml(stravaId)+'" target="_blank" rel="noopener noreferrer">Apri attività su Strava ↗</a></div>' : '';
       return '<article class="article-card">'+image+
         '<div class="article-meta">'+category+'<time>'+escapeHtml(article.date||'')+'</time></div>'+
         '<h3>'+escapeHtml(article.title||'Articolo')+'</h3>'+
         summary+
-        (body?'<details><summary>Leggi articolo</summary>'+body+articleLink+'</details>':articleLink)+
+        (body||strava?'<details><summary>Leggi articolo</summary>'+body+strava+articleLink+'</details>':articleLink)+
         '</article>';
     }).join('');
+    container.querySelectorAll('details').forEach(details=>{
+      details.addEventListener('toggle',()=>{if(details.open) loadStravaEmbeds();});
+    });
   }catch(e){
     container.innerHTML='<div class="article-empty">Gli articoli non sono al momento disponibili.</div>';
   }

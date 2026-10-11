@@ -136,3 +136,12 @@ footer a{text-decoration:underline;text-underline-offset:3px}
 }
 
 .article-image{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:18px;margin:0 0 22px;border:1px solid var(--line)}
+
+/* Strava activities in articles */
+[hidden]{display:none!important}
+.article-strava{margin:20px 0 16px;max-width:100%;min-width:0}
+.article-strava .strava-embed-placeholder,.article-strava iframe{max-width:100%!important}
+.article-strava-link{display:inline-block;margin-top:12px;color:var(--accent);font-weight:750;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+.strava-embed-preview{border:1px solid var(--line);border-radius:16px;background:#f7f9fc;padding:16px;margin-top:18px}
+.strava-embed-preview p{margin:8px 0 0;color:var(--muted);font-size:13px}
+.strava-embed-warning{color:#b54708;background:#fffaeb;border:1px solid #fedf89;border-radius:12px;padding:12px;margin-top:16px}
