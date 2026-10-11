@@ -1,7 +1,7 @@
 const $=id=>document.getElementById(id);
 const type=$('type'), text=$('text'), title=$('title'), url=$('url'), date=$('date');
 const sourceAuthor=$('sourceAuthor'), quoteAuthor=$('quoteAuthor'), note=$('note');
-const articleCategory=$('articleCategory'), articleSummary=$('articleSummary'), xEmbedCode=$('xEmbedCode'), stravaEmbedCode=$('stravaEmbedCode');
+const articleCategory=$('articleCategory'), articleSummary=$('articleSummary'), xEmbedCode=$('xEmbedCode');
 const output=$('jsonOutput'), preview=$('preview'), openGithub=$('openGithub'), status=$('copyStatus');
 
 date.value=new Date().toISOString().slice(0,10);
@@ -53,12 +53,6 @@ function build(){
     openGithub.href='https://github.com/robertocalzoniX/robertocalzoniX.github.io/edit/main/quotes.json';
     preview.innerHTML='<blockquote class="quote-card"><p class="quote-text">'+esc(obj.text||'La tua citazione apparirà qui.')+'</p><div class="quote-footer"><span class="quote-author">'+esc(obj.author)+'</span>'+(obj.note?'<span class="quote-note">'+esc(obj.note)+'</span>':'')+'</div></blockquote>';
   } else if(kind==='article'){
-    const stravaRaw=stravaEmbedCode.value.trim();
-    const stravaDoc=new DOMParser().parseFromString(stravaRaw,'text/html');
-    const stravaDiv=stravaDoc.querySelector('.strava-embed-placeholder[data-embed-type="activity"]');
-    const activityId=stravaDiv?.getAttribute('data-embed-id')||'';
-    const activityToken=stravaDiv?.getAttribute('data-token')||'';
-    const validStrava=/^\d+$/.test(activityId)&&/^[A-Za-z0-9_-]+$/.test(activityToken);
     obj={
       id:'article-'+Date.now(),
       date:dateIt(date.value),
@@ -67,19 +61,8 @@ function build(){
       summary:articleSummary.value.trim(),
       body:text.value.trim()
     };
-    if(validStrava){
-      obj.strava_id=activityId;
-      obj.strava_token=activityToken;
-    }
     openGithub.href='https://github.com/robertocalzoniX/robertocalzoniX.github.io/edit/main/articles.json';
     preview.innerHTML='<article class="article-card"><div class="article-meta"><span class="article-category">'+esc(obj.category)+'</span><time>'+esc(obj.date)+'</time></div><h3>'+esc(obj.title)+'</h3>'+(obj.summary?'<p class="article-summary">'+esc(obj.summary)+'</p>':'')+'<details open><summary>Leggi articolo</summary><div class="article-body">'+esc(obj.body||'Il testo dell\'articolo apparirà qui.').replace(/\n/g,'<br>')+'</div></details></article>';
-    if(validStrava){
-      preview.querySelector('.article-body')?.insertAdjacentHTML('afterend',
-        '<div class="strava-embed-preview"><strong>Attività Strava #'+esc(activityId)+'</strong><p>Il widget sarà visualizzato nell’articolo pubblicato.</p></div>');
-    }else if(stravaRaw){
-      preview.querySelector('.article-body')?.insertAdjacentHTML('afterend',
-        '<p class="strava-embed-warning">Codice Strava non riconosciuto: verifica che contenga ID e token dell’attività.</p>');
-    }
   } else {
     const isRepost=kind==='repost';
     obj={
@@ -97,7 +80,7 @@ function build(){
   return obj;
 }
 
-[type,text,title,url,date,sourceAuthor,quoteAuthor,note,articleCategory,articleSummary,xEmbedCode,stravaEmbedCode].forEach(el=>el.addEventListener('input',build));
+[type,text,title,url,date,sourceAuthor,quoteAuthor,note,articleCategory,articleSummary,xEmbedCode].forEach(el=>el.addEventListener('input',build));
 type.addEventListener('change',build);
 
 $('copyJson').addEventListener('click',async()=>{

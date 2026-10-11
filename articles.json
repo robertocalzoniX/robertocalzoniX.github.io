@@ -5,11 +5,9 @@
       "date": "11 ottobre 2026",
       "category": "Running",
       "title": "Una mezza maratona tra record personali e gestione del ritmo",
-      "summary": "21,26 km in 1:42:15, otto record personali e qualche indicazione utile per le prossime gare.",
-      "body": "Questa mattina ho corso una mezza maratona: 21,26 km registrati dal GPS in 1:42:15, a una media di 4:49/km. Strava ha rilevato il mio miglior tempo sulla distanza della mezza in 1:41:33, ma il tempo ufficiale resta da verificare.\n\nSono arrivati otto record personali, tra cui 5 km in 22:30 e 10 km in 46:03. Sono partito forte, intorno a 4:23-4:27/km nei primi chilometri, per poi rallentare progressivamente nella seconda parte. Anche i dati di frequenza cardiaca e potenza raccontano la fatica crescente, senza però un vero crollo.\n\nNegli ultimi metri sono riuscito comunque a trovare le energie per accelerare. Porto a casa un buon risultato, diversi primati e una lezione per la prossima mezza: partire con un po' più di prudenza può aiutarmi a gestire meglio tutta la distanza.",
-      "image": "assets/20261011_113822.jpg",
-      "strava_id": "20537997941",
-      "strava_token": "leC-0T9xkh7i3bEiYKxNVz8IY9gi4pp_udvTOz0gWe8"
+      "summary": "Mezza maratona chiusa in 1h42m20s ufficiali, con otto record personali e qualche indicazione utile per le prossime gare.",
+      "body": "Questa mattina ho corso una mezza maratona, chiusa con il tempo ufficiale di 1h42m20s. Il GPS ha registrato 21,26 km in 1:42:15, a un ritmo medio di 4:49/km.\n\nSono arrivati anche otto record personali, tra cui 5 km in 22:30 e 10 km in 46:03. Sono partito forte, intorno a 4:23-4:27/km nei primi chilometri, per poi rallentare gradualmente nella seconda parte. Frequenza cardiaca e potenza confermano la fatica crescente, ma senza un vero crollo.\n\nNegli ultimi metri ho trovato ancora le energie per accelerare. Porto a casa un buon risultato e una lezione per le prossime gare: gestire meglio la partenza per arrivare più regolare fino al traguardo.",
+      "image": "assets/20261011_113822.jpg"
     },
     {
       "id": "article-brooks-strada-trail",
