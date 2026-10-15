@@ -1,7 +1,15 @@
 {
   "source": "manual",
-  "updated_at": "2026-10-14T19:13:00+02:00",
+  "updated_at": "2026-10-15T13:53:00+02:00",
   "posts": [
+    {
+      "id": "x-2110474565961068785",
+      "date": "14 ottobre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2110474565961068785",
+      "url": "https://x.com/ManCity/status/2110474565961068785"
+    },
     {
       "id": "x-2110254414204182669",
       "date": "14 ottobre 2026",
