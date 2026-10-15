@@ -1,7 +1,15 @@
 {
   "source": "manual",
-  "updated_at": "2026-10-15T13:53:00+02:00",
+  "updated_at": "2026-10-15T15:04:00+02:00",
   "posts": [
+    {
+      "id": "x-2110637710419656980",
+      "date": "15 ottobre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2110637710419656980",
+      "url": "https://x.com/FiorellaArcodi1/status/2110637710419656980"
+    },
     {
       "id": "x-2110474565961068785",
       "date": "14 ottobre 2026",
