@@ -1,6 +1,14 @@
 {
   "articles": [
     {
+      "id": "article-backup-google-calendar-contatti-apps-script",
+      "date": "15 ottobre 2026",
+      "category": "Tecnologia",
+      "title": "Google Apps Script: backup di calendario e contatti",
+      "summary": "Un piccolo script per salvare periodicamente su Google Drive una copia di calendari e contatti Google.",
+      "body": "Ho realizzato uno script in Google Apps Script per automatizzare il backup di Google Calendar e Google Contatti, salvando le copie direttamente su Google Drive.\n\nL'obiettivo è semplice: conservare una copia periodica dei dati, distinta dalla normale sincronizzazione, senza ricorrere a software esterni.\n\nLo script utilizza i servizi e le API Google e viene eseguito automaticamente tramite un trigger programmato. Dopo le prime correzioni e la verifica dell'esecuzione schedulata, il backup di calendari e contatti ha funzionato correttamente.\n\nUna soluzione personalizzabile e pratica, da affiancare a controlli periodici sulla completezza dei backup e sulla possibilità di ripristinare i dati."
+    },
+    {
       "id": "article-mezza-maratona-11-ottobre-2026",
       "date": "11 ottobre 2026",
       "category": "Running",
