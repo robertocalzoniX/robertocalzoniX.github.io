@@ -1,6 +1,14 @@
 {
   "articles": [
     {
+      "id": "article-hp-z440-omv8-veeam",
+      "date": "23 ottobre 2026",
+      "category": "Tecnologia",
+      "title": "Da workstation a NAS: HP Z440, OpenMediaVault e Veeam",
+      "summary": "Una workstation HP Z440 recuperata e trasformata in un NAS domestico con OpenMediaVault 8, RAID 5 e Veeam Agent.",
+      "body": "Ho recuperato una workstation HP Z440, trasformandola in un NAS domestico per l'archiviazione e il backup dei miei dati.\n\nLa configurazione prevede OpenMediaVault 8 su SSD dedicato e quattro dischi Western Digital da 1 TB configurati in RAID 5, per una capacità utile di circa 3 TB.\n\nIl sistema offre condivisioni di rete SMB, monitoraggio SMART dei dischi e controlli periodici dell'integrità del RAID.\n\nPer il backup dei computer Windows ho scelto Veeam Agent, che permette di creare copie complete del sistema e ripristinarle in caso di necessità.\n\nUn progetto che unisce riutilizzo dell'hardware, software open source e protezione dei dati, dimostrando come una workstation non più recente possa trovare una seconda vita come server domestico.\n\nIl RAID 5 protegge dal guasto di un singolo disco, ma non sostituisce un backup separato."
+    },
+    {
       "id": "article-backup-google-calendar-contatti-apps-script",
       "date": "15 ottobre 2026",
       "category": "Tecnologia",
