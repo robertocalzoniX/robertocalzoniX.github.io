@@ -1,7 +1,15 @@
 {
   "source": "manual",
-  "updated_at": "2026-10-22T16:30:00+02:00",
+  "updated_at": "2026-10-23T16:23:00+02:00",
   "posts": [
+    {
+      "id": "x-2113373130785739174",
+      "date": "22 ottobre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2113373130785739174",
+      "url": "https://x.com/Atalanta_BC/status/2113373130785739174"
+    },
     {
       "id": "x-2113001479036350738",
       "date": "21 ottobre 2026",
