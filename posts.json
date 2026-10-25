@@ -1,7 +1,15 @@
 {
   "source": "manual",
-  "updated_at": "2026-10-24T15:54:00+02:00",
+  "updated_at": "2026-10-25T14:31:00+01:00",
   "posts": [
+    {
+      "id": "x-2114347682231636185",
+      "date": "25 ottobre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2114347682231636185",
+      "url": "https://x.com/robertcal75/status/2114347682231636185"
+    },
     {
       "id": "x-2113984626662252898",
       "date": "24 ottobre 2026",
