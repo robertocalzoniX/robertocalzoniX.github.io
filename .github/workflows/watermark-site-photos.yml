@@ -1,9 +1,18 @@
-name: Watermark site photographs (one time)
+name: Automatic photo watermark
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "assets/**"
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: watermark-site-photos
+  cancel-in-progress: false
 
 jobs:
   watermark:
@@ -17,14 +26,15 @@ jobs:
           python-version: "3.12"
       - name: Install Pillow
         run: python -m pip install Pillow
-      - name: Apply centered watermark
+      - name: Process new or replaced images
         run: python scripts/watermark_site_photos.py
-      - name: Commit updated photographs
+      - name: Commit processed images
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/20261011_113822.jpg assets/scarpe-running.jpg assets/.watermark-completed
+          git add -A assets
           if ! git diff --cached --quiet; then
-            git commit -m "Apply permanent centered watermark to site photographs"
-            git push
+            git commit -m "Apply watermark to uploaded site photos"
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
