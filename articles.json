@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "id": "article-varese-city-run-2026",
+      "date": "25 ottobre 2026",
+      "category": "Running",
+      "title": "VI Varese City Run: una mezza sotto l'ora e quaranta",
+      "summary": "Mezza maratona in 1:39:36, quasi tre minuti meglio di Pavia: partenza più prudente e ritmo più regolare.",
+      "body": "Questa mattina ho partecipato alla VI Varese City Run, chiudendo la mezza maratona in 1:39:36, con 21,27 km registrati dal GPS e un ritmo medio di 4:41/km.\n\nUn miglioramento di quasi tre minuti rispetto alla mezza di Pavia, corsa appena due settimane fa.\n\nLa differenza è stata soprattutto nella gestione della gara: una partenza più prudente, un ritmo costante e una seconda metà decisamente più regolare, nonostante un percorso più impegnativo, con 126 metri di dislivello positivo.\n\nSono riuscito a mantenere una buona potenza per tutta la distanza, trovando ancora le energie per accelerare negli ultimi chilometri e chiudere il ventunesimo a 4:20/km.\n\nDiciannove riconoscimenti su Strava e, soprattutto, la soddisfazione di aver gestito meglio lo sforzo.\n\nUna bella conferma: a volte partire più piano significa arrivare prima. 🏃",
+      "image": "assets/20261025_113642(1).jpg"
+    },
+    {
       "id": "article-hp-z440-omv8-veeam",
       "date": "23 ottobre 2026",
       "category": "Tecnologia",
