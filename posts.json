@@ -1,7 +1,15 @@
 {
   "source": "manual",
-  "updated_at": "2026-10-28T18:43:00+01:00",
+  "updated_at": "2026-10-28T19:00:00+01:00",
   "posts": [
+    {
+      "id": "x-2115431280057970892",
+      "date": "28 ottobre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2115431280057970892",
+      "url": "https://x.com/gi_za_70/status/2115431280057970892"
+    },
     {
       "id": "x-2114892977457745962",
       "date": "27 ottobre 2026",
