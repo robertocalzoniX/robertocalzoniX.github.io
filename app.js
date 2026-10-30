@@ -91,6 +91,25 @@ async function loadQuotes(){
 loadQuotes();
 
 
+// Safe, minimal Markdown for long-form articles; other article formats are unchanged.
+function renderArticleMarkdown(value=''){
+  const inline=text=>escapeHtml(text)
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+    .replace(/`([^`]+)`/g,'<code>$1</code>');
+  const blocks=String(value).trim().split(/\n\s*\n/);
+  return blocks.map(block=>{
+    const lines=block.split('\n').map(x=>x.trim()).filter(Boolean);
+    if(!lines.length) return '';
+    if(lines.length===1&&/^#{2,3}\s/.test(lines[0])){
+      return '<h4>'+inline(lines[0].replace(/^#{2,3}\s+/,''))+'</h4>';
+    }
+    if(lines.every(line=>/^-\s+/.test(line))){
+      return '<ul>'+lines.map(line=>'<li>'+inline(line.slice(2))+'</li>').join('')+'</ul>';
+    }
+    return '<p>'+lines.map(inline).join('<br>')+'</p>';
+  }).join('');
+}
+
 async function loadArticles(){
   const container=document.getElementById('articles');
   if(!container) return;
@@ -107,7 +126,7 @@ async function loadArticles(){
       const category=article.category ? '<span class="article-category">'+escapeHtml(article.category)+'</span>' : '';
       const image=article.image ? '<img class="article-image" src="'+escapeHtml(article.image)+'" alt="'+escapeHtml(article.title||'Immagine articolo')+'" loading="lazy">' : '';
       const summary=article.summary ? '<p class="article-summary">'+escapeHtml(article.summary)+'</p>' : '';
-      const body=article.body ? '<div class="article-body">'+escapeHtml(article.body).replace(/\n/g,'<br>')+'</div>' : '';
+      const body=article.body ? '<div class="article-body">'+(article.format==='markdown'?renderArticleMarkdown(article.body):escapeHtml(article.body).replace(/\n/g,'<br>'))+'</div>' : '';
       const articleLink=article.url ? '<a class="article-link-button" href="'+escapeHtml(article.url)+'" target="_blank" rel="noreferrer">'+escapeHtml(article.link_label||'Apri link')+' ↗</a>' : '';
       return '<article class="article-card">'+image+
         '<div class="article-meta">'+category+'<time>'+escapeHtml(article.date||'')+'</time></div>'+
