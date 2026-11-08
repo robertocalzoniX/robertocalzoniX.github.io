@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "id": "article-maratonina-busto-arsizio-2026",
+      "date": "8 novembre 2026",
+      "category": "Running",
+      "title": "Maratonina di Busto Arsizio: 15 km perfetti, poi le gambe hanno detto basta",
+      "summary": "XXXIII Maratonina di Busto Arsizio chiusa in 1:42:07: ritmo regolare fino al 15° chilometro, poi un calo progressivo. Cosa raccontano i dati di Strava e Garmin.",
+      "image": "assets/20261108_112059.jpg",
+      "format": "markdown",
+      "body": "L'8 novembre ho corso la **XXXIII Maratonina di Busto Arsizio** in **1:42:07**, a una media di **4:48/km**. Il percorso era piatto, con 52 metri di dislivello, il cielo coperto, una temperatura di 8,7 °C e un'umidità del 90%.\n\nA gara finita ho riguardato i dati di Strava e Garmin per capire come fosse andata davvero.\n\n## La gara\n\nDopo un primo chilometro veloce, chiuso a **4:28/km**, mi sono assestato tra **4:38 e 4:51/km**, mantenendo quel ritmo fino al 15° chilometro, raggiunto in **1:10:22**. Anche la potenza è rimasta piuttosto stabile, intorno ai **330 W**.\n\nDal 16° chilometro è iniziato il rallentamento: **4:59, 5:06, 5:13/km**, poi circa **5:09/km** per due chilometri. Eppure, negli ultimi 250 metri, sono riuscito ancora ad accelerare fino a **4:28/km**.\n\n## Il dato curioso\n\nNella parte finale la frequenza cardiaca non è salita: è scesa da circa **170 a 161–165 bpm**, mentre la potenza diminuiva di circa il **7%** e la cadenza passava da **86 a 82**.\n\nNon sembra quindi che sia stato un picco di frequenza cardiaca a impormi il rallentamento. Potrebbe essere stata la fatica muscolare o una ridotta capacità di mantenere lo sforzo, ma dai soli dati non posso stabilirlo con certezza. Anche il freddo potrebbe aver influenzato la lettura del sensore ottico al polso.\n\n## E il carburante?\n\nHo preso un gel prima del via, uno all'8° e uno al 15° chilometro, bevendo acqua ai ristori dei chilometri 6, 12 e 17.\n\nÈ una strategia che avevo già utilizzato a Varese, dove ero riuscito a mantenere il passo fino alla fine. Per questo non credo che l'alimentazione in gara sia la spiegazione principale del calo.\n\n## Cosa mi porto a casa\n\nIl ritmo è stato regolare per tre quarti di gara, poi è arrivato un calo progressivo. Due settimane prima, a Varese, avevo corso una mezza più intensa, chiusa in **1:39:36**: la mia ipotesi è che a Busto si sia fatta sentire un po' di **stanchezza accumulata**.\n\nResta, appunto, un'ipotesi. Il risultato non è quello che speravo dopo i primi 15 chilometri, ma è un'altra gara utile per conoscere meglio i miei limiti e imparare a gestire la distanza."
+    },
+    {
       "id": "article-consolidamento-268000-file-google-drive-apps-script",
       "date": "30 ottobre 2026",
       "category": "Tecnologia",
