@@ -1,6 +1,17 @@
 {
   "articles": [
     {
+      "id": "article-spotdl-windows-2026",
+      "date": "11 novembre 2026",
+      "category": "Tecnologia",
+      "title": "spotDL su Windows: scaricare musica partendo da Spotify",
+      "summary": "Installazione e primi test di spotDL su Windows, con un piccolo inconveniente: i file scaricati erano finiti in una cartella diversa da quella prevista.",
+      "format": "markdown",
+      "body": "Oggi ho installato e configurato **spotDL (Spotify Downloader)** su Windows, un progetto open source che permette di cercare e scaricare brani musicali utilizzando i collegamenti di Spotify.\n\nA differenza di quanto potrebbe suggerire il nome, spotDL **non scarica direttamente l'audio da Spotify**: utilizza Spotify per recuperare le informazioni sui brani e cerca le corrispondenti tracce audio su YouTube.\n\n## Installazione e utilizzo\n\nIl progetto è disponibile gratuitamente su GitHub e può essere utilizzato direttamente dal terminale di Windows.\n\nUna volta installato, è sufficiente indicare il collegamento Spotify di un brano, album o playlist per avviare la ricerca e il download.\n\nspotDL permette anche di organizzare i file, scegliere il formato audio e inserire metadati come titolo, artista e copertina.\n\n## Un piccolo inconveniente\n\nDopo i primi test, tutto sembrava funzionare correttamente, ma la cartella che avevo predisposto, `C:\\Musica\\spotDL`, risultava vuota.\n\nIl motivo era molto semplice: **i file erano stati salvati in una directory diversa da quella che stavo controllando**.\n\nUn piccolo dettaglio che ricorda quanto sia importante verificare la cartella di destinazione quando si utilizzano strumenti da riga di comando.\n\n## Conclusioni\n\nspotDL è uno strumento interessante per chi preferisce utilizzare software open source e gestire i propri file musicali localmente.\n\nL'installazione su Windows è relativamente semplice e, una volta configurata correttamente la directory di destinazione, l'utilizzo risulta immediato.\n\nNaturalmente, il download dei contenuti deve rispettare i diritti d'autore e le condizioni dei servizi utilizzati.\n\n**Progetto GitHub:** [spotDL](https://github.com/spotDL/spotify-downloader)",
+      "url": "https://github.com/spotDL/spotify-downloader",
+      "link_label": "Progetto spotDL su GitHub"
+    },
+    {
       "id": "article-maratonina-busto-arsizio-2026",
       "date": "8 novembre 2026",
       "category": "Running",
