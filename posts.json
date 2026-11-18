@@ -1,7 +1,15 @@
 {
   "source": "manual",
-  "updated_at": "2026-11-16T20:25:00+01:00",
+  "updated_at": "2026-11-18T21:57:00+01:00",
   "posts": [
+    {
+      "id": "x-2123153519871979700",
+      "date": "18 novembre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2123153519871979700",
+      "url": "https://x.com/RaiNews/status/2123153519871979700"
+    },
     {
       "id": "x-2122235148766740527",
       "date": "16 novembre 2026",
