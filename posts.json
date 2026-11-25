@@ -1,7 +1,15 @@
 {
   "source": "manual",
-  "updated_at": "2026-11-25T07:22:00+01:00",
+  "updated_at": "2026-11-25T20:11:00+01:00",
   "posts": [
+    {
+      "id": "x-2125615800148967542",
+      "date": "25 novembre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2125615800148967542",
+      "url": "https://x.com/ItaliaTeam_it/status/2125615800148967542"
+    },
     {
       "id": "x-2125346355183079718",
       "date": "24 novembre 2026",
