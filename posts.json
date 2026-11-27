@@ -1,7 +1,15 @@
 {
   "source": "manual",
-  "updated_at": "2026-11-26T23:00:00+01:00",
+  "updated_at": "2026-11-27T20:32:00+01:00",
   "posts": [
+    {
+      "id": "x-2126250720366309659",
+      "date": "27 novembre 2026",
+      "category": "X",
+      "type": "x-embed",
+      "tweet_id": "2126250720366309659",
+      "url": "https://x.com/SkySportMotoGP/status/2126250720366309659"
+    },
     {
       "id": "x-2126073458110902777",
       "date": "26 novembre 2026",
